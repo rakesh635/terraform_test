@@ -6,6 +6,6 @@ on:
 jobs:
   test1:
     uses: ./.github/workflows/childworkflow.yml
-	secrets:
-    testsshusername: ${{ secrets.SSHUSERNAME }}
-	  testsshpassword: ${{ secrets.SSHPASSWORD }}
+    secrets:
+      testsshusername: ${{ secrets.SSHUSERNAME }}
+      testsshpassword: ${{ secrets.SSHPASSWORD }}
