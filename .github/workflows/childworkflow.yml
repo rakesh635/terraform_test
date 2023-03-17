@@ -1,0 +1,16 @@
+name: "child workflow"
+
+on:
+  workflow_call:
+    secrets:
+      testsshusername:
+        description: 'ssh username'
+        required: true
+	  testsshpassword:
+        description: 'ssh password'
+        required: true
+
+jobs:
+  test1:
+    uses: actions/checkout@v3
+	  run: echo "${{ secrets.testsshusername }} + ${{ secrets.testsshpassword }} "
